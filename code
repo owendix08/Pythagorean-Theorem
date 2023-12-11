@@ -1,0 +1,30 @@
+import math
+
+def get_triangle_sides():
+    try:
+        side_a = float(input("Enter the length of side A: "))
+        side_b = float(input("Enter the length of side B: "))
+        return side_a, side_b
+    except ValueError:
+        print("Invalid input. Please enter valid numerical values.")
+        return None, None
+
+def calculate_hypotenuse(side_a, side_b):
+    hypotenuse = math.sqrt(side_a**2 + side_b**2)
+    return hypotenuse
+
+def main():
+    print("Welcome to the Right Triangle Calculator!")
+
+    # Collect sides A and B
+    side_a, side_b = get_triangle_sides()
+
+    # Check if inputs are valid
+    if side_a is not None and side_b is not None:
+        # Calculate and output side C
+        hypotenuse = calculate_hypotenuse(side_a, side_b)
+        print(f"The length of side C is: {hypotenuse:.2f}")
+
+if __name__ == "__main__":
+    main()
+
