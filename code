@@ -24,7 +24,15 @@ def main():
         # Calculate and output side C
         hypotenuse = calculate_hypotenuse(side_a, side_b)
         print(f"The length of side C is: {hypotenuse:.2f}")
-
 if __name__ == "__main__":
+    # The following block of code is executed only when this script is run directly,
+    # not when it is imported as a module into another script.
+
+    # Display a welcome message or any setup information
+    print("Starting the Right Triangle Calculator!")
+
+    # Call the main function to initiate the calculation process
     main()
 
+    # Display a goodbye message or any concluding information
+    print("Thank you for using the Right Triangle Calculator!")
